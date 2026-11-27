@@ -1,0 +1,1459 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大象视频传媒官网_原创视频内容平台_企业品牌影像社区</title>
+<meta name="description" content="大象视频传媒官网，专注原创影视内容与企业品牌影像的官方视频内容平台，提供高清正版视频、创作者社区、品牌故事与行业观察，持续运营的品质内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1a1f'/%3E%3Cpath d='M20 20c8-6 20-4 24 4 3 7-1 15-8 18-4 2-9 1-12-2' stroke='%23ff5a1f' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='40' cy='26' r='3' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --dx-bg:#121216;
+  --dx-bg2:#181820;
+  --dx-bg3:#1f1f29;
+  --dx-line:rgba(255,255,255,.09);
+  --dx-line2:rgba(255,255,255,.16);
+  --dx-txt:#ececf1;
+  --dx-mut:#9a9aa8;
+  --dx-mut2:#767684;
+  --dx-hot:#ff5a1f;
+  --dx-hot2:#ffb020;
+  --dx-cyan:#3ee9d0;
+  --dx-r:16px;
+  --dx-head-h:118px;
+  --dx-max:1200px;
+  --dx-font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--dx-head-h) + 14px)}
+body{
+  font-family:var(--dx-font);
+  background:
+    radial-gradient(1100px 540px at 88% -8%,rgba(255,90,31,.16),transparent 62%),
+    radial-gradient(820px 460px at 4% 12%,rgba(62,233,208,.09),transparent 60%),
+    var(--dx-bg);
+  color:var(--dx-txt);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input{font-family:inherit}
+ul,ol{list-style:none}
+h1,h2,h3,h4{line-height:1.25;font-weight:800;letter-spacing:-.01em}
+
+.dx-wrap{width:min(var(--dx-max),calc(100% - 40px));margin-inline:auto}
+.dx-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--dx-hot2);
+}
+.dx-eyebrow::before{content:"";width:22px;height:2px;background:linear-gradient(90deg,var(--dx-hot),var(--dx-hot2));border-radius:2px}
+.dx-sec{padding:74px 0;border-top:1px solid var(--dx-line)}
+.dx-sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:38px}
+.dx-sec-head h2{font-size:clamp(23px,3.1vw,34px);margin-top:12px;max-width:760px}
+.dx-sec-desc{color:var(--dx-mut);font-size:14.5px;max-width:430px;min-width:0}
+.dx-chip{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:4px 11px;border-radius:999px;
+  font-size:12px;font-weight:600;color:var(--dx-cyan);
+  background:rgba(62,233,208,.09);border:1px solid rgba(62,233,208,.26);
+  white-space:nowrap;
+}
+.dx-chip--hot{color:var(--dx-hot2);background:rgba(255,176,32,.1);border-color:rgba(255,176,32,.3)}
+.dx-chip--mut{color:var(--dx-mut);background:rgba(255,255,255,.045);border-color:var(--dx-line)}
+.dx-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:12px 22px;border-radius:11px;font-size:14.5px;font-weight:700;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease;
+  border:1px solid transparent;
+}
+.dx-btn--primary{background:linear-gradient(135deg,var(--dx-hot),#ff8a3d);color:#160a05;box-shadow:0 10px 26px -10px rgba(255,90,31,.75)}
+.dx-btn--primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px -12px rgba(255,90,31,.9)}
+.dx-btn--ghost{border-color:var(--dx-line2);color:var(--dx-txt);background:rgba(255,255,255,.03)}
+.dx-btn--ghost:hover{border-color:var(--dx-cyan);color:var(--dx-cyan);transform:translateY(-2px)}
+.dx-btn--mini{padding:7px 14px;font-size:12.5px;border-radius:9px}
+
+/* ===== 吸顶外壳：公告条 + 页头 ===== */
+.dx-stick{position:sticky;top:0;z-index:120}
+.dx-notice{
+  background:linear-gradient(90deg,#241206,#2b1607 45%,#1b1020);
+  border-bottom:1px solid rgba(255,176,32,.22);
+  font-size:13px;color:#f4d9bd;
+}
+.dx-notice-in{display:flex;align-items:center;gap:12px;padding:9px 0;overflow:hidden}
+.dx-notice-tag{
+  flex:none;display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:800;letter-spacing:.1em;
+  color:#1a0d03;background:var(--dx-hot2);
+  padding:3px 9px;border-radius:6px;
+}
+.dx-notice-list{display:flex;gap:34px;flex:1;min-width:0;white-space:nowrap;overflow:hidden}
+.dx-notice-list li{display:flex;align-items:center;gap:8px;opacity:.94}
+.dx-notice-list b{color:#fff;font-weight:700}
+.dx-notice-dot{width:4px;height:4px;border-radius:50%;background:var(--dx-hot);flex:none}
+.dx-notice-more{flex:none;font-size:12.5px;font-weight:700;color:var(--dx-hot2);border-bottom:1px dashed rgba(255,176,32,.5)}
+@media(max-width:900px){.dx-notice-list li:nth-child(n+2){display:none}}
+
+.dx-header{background:rgba(18,18,22,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--dx-line)}
+.dx-header-in{display:flex;align-items:center;gap:22px;padding:12px 0}
+.dx-logo{display:flex;align-items:center;gap:11px;flex:none}
+.dx-logo-mark{width:42px;height:42px;border-radius:12px;flex:none;box-shadow:0 8px 20px -8px rgba(255,90,31,.8)}
+.dx-logo-txt strong{display:block;font-size:16.5px;letter-spacing:.02em}
+.dx-logo-txt span{display:block;font-size:10.5px;letter-spacing:.2em;color:var(--dx-mut2);text-transform:uppercase}
+.dx-nav{display:flex;align-items:center;gap:4px;margin-left:8px}
+.dx-nav a{
+  padding:8px 12px;border-radius:9px;font-size:14px;font-weight:600;color:#c9c9d4;
+  transition:color .18s,background .18s;
+}
+.dx-nav a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.dx-search{
+  margin-left:auto;display:flex;align-items:center;gap:8px;
+  background:var(--dx-bg3);border:1px solid var(--dx-line2);
+  border-radius:11px;padding:7px 10px 7px 13px;min-width:246px;
+  transition:border-color .2s,box-shadow .2s;
+}
+.dx-search:focus-within{border-color:var(--dx-cyan);box-shadow:0 0 0 3px rgba(62,233,208,.13)}
+.dx-search input{background:none;border:none;outline:none;color:var(--dx-txt);font-size:13.5px;width:100%;min-width:0}
+.dx-search input::placeholder{color:var(--dx-mut2)}
+.dx-search button{
+  flex:none;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;
+  background:rgba(255,90,31,.16);color:var(--dx-hot);
+}
+.dx-search-res{
+  position:absolute;left:0;right:0;top:calc(100% + 8px);
+  background:#1c1c25;border:1px solid var(--dx-line2);border-radius:12px;
+  padding:8px;display:none;box-shadow:0 22px 48px -18px rgba(0,0,0,.9);z-index:8;
+}
+.dx-search-res.is-open{display:block}
+.dx-search-res p{font-size:12px;color:var(--dx-mut2);padding:4px 8px 8px}
+.dx-search-res a{display:block;padding:8px 10px;border-radius:8px;font-size:13.5px;color:#dcdce4}
+.dx-search-res a:hover{background:rgba(255,90,31,.12);color:#fff}
+.dx-search-wrap{position:relative;margin-left:auto}
+.dx-search-wrap .dx-search{margin-left:0}
+.dx-burger{display:none;width:42px;height:42px;border-radius:11px;border:1px solid var(--dx-line2);place-items:center;flex:none;background:rgba(255,255,255,.03)}
+.dx-burger span{display:block;width:18px;height:2px;background:#fff;border-radius:2px;margin:3px auto;transition:transform .22s,opacity .22s}
+.dx-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.dx-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.dx-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+@media(max-width:1040px){
+  .dx-nav{display:none}
+  .dx-burger{display:grid}
+  .dx-search-wrap{margin-left:auto}
+  .dx-search-wrap .dx-search{min-width:0;width:190px}
+}
+@media(max-width:600px){.dx-search-wrap .dx-search{display:none}}
+.dx-mobile-nav{display:none;border-top:1px solid var(--dx-line);background:rgba(20,20,26,.98)}
+.dx-mobile-nav.is-open{display:block}
+.dx-mobile-nav ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:12px 0 16px}
+.dx-mobile-nav a{display:block;padding:11px 14px;border-radius:10px;font-size:14px;font-weight:600;background:rgba(255,255,255,.04);border:1px solid var(--dx-line)}
+
+/* ===== 首屏（左文右侧大图 + 数据条） ===== */
+.dx-hero{padding:56px 0 48px;position:relative}
+.dx-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:50px;align-items:center}
+.dx-hero h1{font-size:clamp(34px,4.6vw,58px);letter-spacing:-.02em;margin:16px 0 0}
+.dx-hero h1 em{font-style:normal;color:var(--dx-hot);text-shadow:0 0 34px rgba(255,90,31,.4)}
+.dx-hero-lead{margin-top:18px;color:#c4c4d0;font-size:15.5px;max-width:540px}
+.dx-hero-lead strong{color:#fff}
+.dx-hero-intro{margin-top:18px;font-size:14.5px;color:var(--dx-mut);max-width:560px;padding-left:15px;border-left:2px solid rgba(255,90,31,.45)}
+.dx-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.dx-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:34px}
+.dx-hero-stat{background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid var(--dx-line);border-radius:13px;padding:14px 15px}
+.dx-hero-stat b{display:block;font-size:clamp(20px,2.4vw,27px);color:#fff;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.dx-hero-stat b i{font-style:normal;font-size:13px;color:var(--dx-hot2);margin-left:2px}
+.dx-hero-stat span{font-size:12px;color:var(--dx-mut2);letter-spacing:.03em}
+.dx-hero-visual{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--dx-line2);box-shadow:0 34px 70px -34px rgba(0,0,0,.95)}
+.dx-hero-visual svg{width:100%;height:auto;aspect-ratio:16/11}
+.dx-hero-badge{
+  position:absolute;left:16px;top:16px;display:flex;align-items:center;gap:8px;
+  background:rgba(10,10,14,.72);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.16);border-radius:999px;
+  padding:6px 13px;font-size:12px;font-weight:700;color:#ffd9c2;
+}
+.dx-hero-live{width:7px;height:7px;border-radius:50%;background:var(--dx-hot);box-shadow:0 0 0 4px rgba(255,90,31,.22);animation:dxPulse 1.8s infinite}
+@keyframes dxPulse{0%,100%{opacity:1}50%{opacity:.35}}
+.dx-hero-caption{
+  position:absolute;left:0;right:0;bottom:0;padding:44px 18px 16px;
+  background:linear-gradient(to top,rgba(8,8,12,.94),rgba(8,8,12,0));
+}
+.dx-hero-caption strong{display:block;font-size:15.5px}
+.dx-hero-caption span{font-size:12.5px;color:#a9a9b8}
+@media(max-width:900px){
+  .dx-hero-grid{grid-template-columns:minmax(0,1fr);gap:34px}
+  .dx-hero-visual{order:-1}
+}
+
+/* ===== 焦点内容 + 视频流 ===== */
+.dx-feature-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:26px;align-items:start}
+.dx-feature-main{border:1px solid var(--dx-line2);border-radius:20px;overflow:hidden;background:var(--dx-bg2)}
+.dx-feature-main figure{position:relative}
+.dx-feature-main img,.dx-feature-main svg{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.dx-play{
+  position:absolute;left:50%;top:50%;width:62px;height:62px;border-radius:50%;
+  transform:translate(-50%,-50%);display:grid;place-items:center;
+  background:rgba(255,90,31,.92);box-shadow:0 0 0 9px rgba(255,90,31,.17);
+  transition:transform .2s;
+}
+.dx-play:hover{transform:translate(-50%,-50%) scale(1.07)}
+.dx-feature-body{padding:20px 22px 22px}
+.dx-feature-body h3{font-size:20px;margin-bottom:9px}
+.dx-feature-body p{font-size:14px;color:var(--dx-mut)}
+.dx-meta{display:flex;flex-wrap:wrap;align-items:center;gap:9px 14px;margin-top:14px;font-size:12.5px;color:var(--dx-mut2)}
+.dx-meta .dx-author{color:var(--dx-cyan);font-weight:700}
+.dx-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.dx-act button{
+  display:inline-flex;align-items:center;gap:6px;
+  border:1px solid var(--dx-line2);border-radius:9px;
+  padding:6px 11px;font-size:12.5px;color:#ccccd8;
+  transition:border-color .18s,color .18s,background .18s;
+}
+.dx-act button:hover{border-color:var(--dx-hot2);color:var(--dx-hot2)}
+.dx-act button.is-on{color:var(--dx-hot);border-color:rgba(255,90,31,.6);background:rgba(255,90,31,.1)}
+.dx-act button.is-on .dx-heart{fill:currentColor}
+.dx-heart{display:inline-block}
+
+.dx-vlist{display:grid;gap:2px}
+.dx-vitem{
+  display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:14px;align-items:center;
+  padding:15px 6px;border-bottom:1px dashed var(--dx-line);
+  transition:background .18s,padding-left .18s;
+  border-radius:8px;
+}
+.dx-vitem:hover{background:rgba(255,255,255,.035);padding-left:12px}
+.dx-vnum{font-size:15px;font-weight:800;color:var(--dx-mut2);font-variant-numeric:tabular-nums}
+.dx-vitem:nth-child(1) .dx-vnum,.dx-vitem:nth-child(2) .dx-vnum,.dx-vitem:nth-child(3) .dx-vnum{color:var(--dx-hot)}
+.dx-vtitle{font-size:15px;font-weight:700;color:#f2f2f7}
+.dx-vdesc{font-size:12.7px;color:var(--dx-mut2);margin-top:3px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+.dx-vtags{display:flex;gap:7px;margin-top:7px;flex-wrap:wrap}
+.dx-vtags span{font-size:11px;padding:2px 8px;border-radius:6px;background:rgba(62,233,208,.08);color:var(--dx-cyan);border:1px solid rgba(62,233,208,.2)}
+.dx-vstats{text-align:right;font-size:11.5px;color:var(--dx-mut2);white-space:nowrap}
+.dx-vstats b{display:block;font-size:13px;color:#e4e4ec;font-variant-numeric:tabular-nums}
+@media(max-width:520px){
+  .dx-vitem{grid-template-columns:28px minmax(0,1fr);gap:10px}
+  .dx-vstats{grid-column:2;text-align:left}
+  .dx-vstats b{display:inline;margin-right:8px}
+}
+@media(max-width:860px){.dx-feature-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ===== 关键词解析长文 ===== */
+.dx-longread{background:linear-gradient(180deg,rgba(255,255,255,.032),rgba(255,255,255,.008));border:1px solid var(--dx-line);border-radius:22px;padding:38px clamp(18px,3.4vw,44px)}
+.dx-longread h2{font-size:clamp(23px,3vw,31px);margin-top:12px}
+.dx-longread h3{font-size:17.5px;margin:30px 0 11px;color:#fff;display:flex;align-items:center;gap:10px}
+.dx-longread h3::before{content:"";width:5px;height:17px;border-radius:3px;background:linear-gradient(180deg,var(--dx-hot),var(--dx-hot2));flex:none}
+.dx-longread p{font-size:14.7px;color:#c0c0cc;margin-bottom:13px}
+.dx-longread p strong{color:#fff}
+.dx-longread .dx-quotelist{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:20px 0 6px}
+.dx-longread .dx-quotelist div{background:rgba(0,0,0,.3);border-left:2px solid var(--dx-hot);border-radius:0 11px 11px 0;padding:13px 15px;font-size:13.4px;color:#b6b6c4}
+.dx-longread .dx-quotelist b{color:var(--dx-hot2);display:block;font-size:13px;margin-bottom:4px}
+
+/* ===== 专题企划 ===== */
+.dx-topic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.dx-topic{
+  background:var(--dx-bg2);border:1px solid var(--dx-line);border-radius:18px;
+  padding:22px;display:flex;flex-direction:column;gap:13px;
+  transition:transform .22s,border-color .22s,box-shadow .22s;
+}
+.dx-topic:hover{transform:translateY(-4px);border-color:rgba(255,90,31,.5);box-shadow:0 24px 46px -26px rgba(255,90,31,.5)}
+.dx-topic-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.dx-topic h3{font-size:17.5px}
+.dx-topic>p{font-size:13.4px;color:var(--dx-mut)}
+.dx-topic ul{display:grid;gap:9px;margin-top:2px}
+.dx-topic li{font-size:13.2px;color:#c7c7d3;padding-left:16px;position:relative}
+.dx-topic li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;border:1.5px solid var(--dx-hot2)}
+.dx-topic-img{border-radius:12px;overflow:hidden;border:1px solid var(--dx-line)}
+.dx-topic-img svg{width:100%;height:auto;aspect-ratio:16/8}
+
+/* ===== 创作者矩阵（双列简介） ===== */
+.dx-authors{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.dx-author-card{
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:15px;
+  background:linear-gradient(150deg,rgba(255,255,255,.06),rgba(255,255,255,.012));
+  border:1px solid var(--dx-line);border-radius:17px;padding:19px;
+  transition:border-color .2s,transform .2s;
+}
+.dx-author-card:hover{border-color:rgba(62,233,208,.42);transform:translateY(-3px)}
+.dx-avatar{width:56px;height:56px;border-radius:50%;flex:none;overflow:hidden;border:2px solid rgba(255,255,255,.16)}
+.dx-avatar svg{width:100%;height:100%}
+.dx-author-name{font-size:15.5px;font-weight:800;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.dx-author-field{font-size:12px;color:var(--dx-hot2);font-weight:700;margin-top:2px}
+.dx-author-nums{display:flex;gap:14px;font-size:11.5px;color:var(--dx-mut2);margin-top:7px;flex-wrap:wrap}
+.dx-author-nums b{color:#e9e9f1;font-size:12.5px}
+.dx-author-bio{grid-column:1/-1;font-size:13.2px;color:var(--dx-mut);border-top:1px dashed var(--dx-line);padding-top:12px}
+.dx-author-card .dx-btn{align-self:flex-start}
+@media(max-width:400px){.dx-author-card{grid-template-columns:minmax(0,1fr)}}
+
+/* ===== 榜单 + 评价 ===== */
+.dx-rank-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:26px;align-items:start}
+.dx-rank{background:var(--dx-bg2);border:1px solid var(--dx-line);border-radius:20px;padding:8px 20px 16px}
+.dx-rank-tabs{display:flex;gap:6px;padding:12px 0 8px;border-bottom:1px solid var(--dx-line);flex-wrap:wrap}
+.dx-rank-tabs button{font-size:13px;font-weight:700;color:var(--dx-mut);padding:6px 13px;border-radius:8px;transition:.18s}
+.dx-rank-tabs button.is-active{background:rgba(255,90,31,.16);color:var(--dx-hot)}
+.dx-rank ol{counter-reset:dxr}
+.dx-rank li{
+  counter-increment:dxr;display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:12px;
+  align-items:center;padding:13px 0;border-bottom:1px dashed var(--dx-line);font-size:13.6px;
+}
+.dx-rank li:last-child{border-bottom:none}
+.dx-rank li::before{
+  content:counter(dxr);font-weight:800;font-size:13px;color:var(--dx-mut2);
+  width:24px;height:24px;border-radius:7px;display:grid;place-items:center;background:rgba(255,255,255,.05);
+}
+.dx-rank li:nth-child(1)::before{background:linear-gradient(135deg,#ff5a1f,#ffb020);color:#170b04}
+.dx-rank li:nth-child(2)::before{background:rgba(255,90,31,.28);color:#ffd0b8}
+.dx-rank li:nth-child(3)::before{background:rgba(255,90,31,.16);color:#ffb391}
+.dx-rank .dx-rk-t{color:#ededf3;font-weight:600}
+.dx-rank .dx-rk-s{color:var(--dx-mut2);font-size:11.5px}
+.dx-rank li>span:last-child{color:var(--dx-cyan);font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+@media(max-width:820px){.dx-rank-grid{grid-template-columns:minmax(0,1fr)}}
+
+.dx-comments{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.dx-comment{
+  background:var(--dx-bg2);border:1px solid var(--dx-line);border-radius:15px;padding:17px;
+  display:flex;flex-direction:column;gap:9px;
+}
+.dx-comment-h{display:flex;align-items:center;gap:10px}
+.dx-comment-av{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:12.5px;font-weight:800;color:#140a04;flex:none}
+.dx-comment-n{font-size:13.3px;font-weight:700}
+.dx-comment-t{font-size:11.3px;color:var(--dx-mut2)}
+.dx-comment p{font-size:13.2px;color:#c6c6d2}
+.dx-comment-f{font-size:11.4px;color:var(--dx-mut2);display:flex;gap:12px;margin-top:auto;padding-top:4px;flex-wrap:wrap}
+.dx-stars{color:var(--dx-hot2);font-size:12px;letter-spacing:1px}
+
+/* ===== 企业动态 ===== */
+.dx-news{display:grid;gap:1px;background:var(--dx-line);border:1px solid var(--dx-line);border-radius:18px;overflow:hidden}
+.dx-news-item{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:20px;align-items:center;background:var(--dx-bg);padding:18px 22px}
+.dx-news-date{font-size:12.5px;color:var(--dx-hot2);font-weight:700;font-variant-numeric:tabular-nums}
+.dx-news-item h3{font-size:14.8px;font-weight:700;margin-bottom:3px}
+.dx-news-item p{font-size:12.8px;color:var(--dx-mut2)}
+@media(max-width:640px){.dx-news-item{grid-template-columns:minmax(0,1fr);gap:6px}.dx-news-date{order:-1}}
+
+/* ===== FAQ ===== */
+.dx-faq{display:grid;gap:10px;max-width:900px}
+.dx-faq details{background:var(--dx-bg2);border:1px solid var(--dx-line);border-radius:13px;overflow:hidden;transition:border-color .2s}
+.dx-faq details[open]{border-color:rgba(255,90,31,.45)}
+.dx-faq summary{
+  list-style:none;cursor:pointer;padding:16px 20px;font-size:14.6px;font-weight:700;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.dx-faq summary::-webkit-details-marker{display:none}
+.dx-faq summary::after{content:"+";font-size:19px;font-weight:400;color:var(--dx-hot2);transition:transform .2s;line-height:1}
+.dx-faq details[open] summary::after{transform:rotate(45deg)}
+.dx-faq p{padding:0 20px 18px;font-size:13.6px;color:var(--dx-mut)}
+
+/* ===== 合作墙 ===== */
+.dx-partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.dx-partner{
+  border:1px solid var(--dx-line);border-radius:13px;padding:18px 14px;text-align:center;
+  background:rgba(255,255,255,.028);font-size:13.5px;font-weight:700;color:#d5d5e0;
+  letter-spacing:.02em;transition:border-color .2s,color .2s,transform .2s;
+}
+.dx-partner:hover{border-color:var(--dx-cyan);color:var(--dx-cyan);transform:translateY(-3px)}
+.dx-partner small{display:block;font-size:11px;font-weight:500;color:var(--dx-mut2);margin-top:3px;letter-spacing:0}
+
+/* ===== CTA 投稿条 ===== */
+.dx-cta{
+  border-radius:22px;padding:clamp(24px,4vw,44px);
+  background:
+    radial-gradient(680px 240px at 88% 0%,rgba(255,90,31,.34),transparent 66%),
+    linear-gradient(120deg,#1b1b25,#15151c);
+  border:1px solid var(--dx-line2);
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:26px;align-items:center;
+}
+.dx-cta h2{font-size:clamp(21px,2.8vw,29px);margin-top:10px}
+.dx-cta p{font-size:14px;color:var(--dx-mut);margin-top:9px;max-width:560px}
+@media(max-width:720px){.dx-cta{grid-template-columns:minmax(0,1fr)}}
+
+/* ===== 页脚 ===== */
+.dx-footer{border-top:1px solid var(--dx-line);background:#0d0d11;padding:52px 0 26px;margin-top:0}
+.dx-footer-grid{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:32px}
+.dx-footer h4{font-size:13.5px;margin-bottom:13px;color:#fff;letter-spacing:.05em}
+.dx-footer li{font-size:13px;color:var(--dx-mut);margin-bottom:9px}
+.dx-footer li a:hover{color:var(--dx-hot2)}
+.dx-footer-about p{font-size:13.2px;color:var(--dx-mut);max-width:400px;margin-top:13px}
+.dx-footer-bottom{
+  margin-top:38px;padding-top:20px;border-top:1px solid var(--dx-line);
+  display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;
+  font-size:12.2px;color:var(--dx-mut2);
+}
+@media(max-width:820px){.dx-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.dx-footer-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ===== 回到顶部 & Toast & 弹窗 ===== */
+.dx-top{
+  position:fixed;right:20px;bottom:22px;z-index:90;
+  width:46px;height:46px;border-radius:13px;display:grid;place-items:center;
+  background:rgba(255,90,31,.94);color:#170b04;font-weight:800;
+  box-shadow:0 12px 26px -10px rgba(255,90,31,.85);
+  opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity .24s,transform .24s,visibility .24s;
+}
+.dx-top.is-show{opacity:1;visibility:visible;transform:none}
+.dx-toast{
+  position:fixed;left:50%;bottom:30px;transform:translate(-50%,16px);
+  background:#242430;border:1px solid var(--dx-line2);border-radius:12px;
+  padding:11px 20px;font-size:13.4px;font-weight:600;color:#fff;
+  z-index:200;opacity:0;visibility:hidden;transition:.26s;
+  box-shadow:0 20px 40px -20px rgba(0,0,0,.9);max-width:88vw;text-align:center;
+}
+.dx-toast.is-show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.dx-modal{
+  position:fixed;inset:0;z-index:240;display:none;
+  align-items:center;justify-content:center;padding:20px;
+  background:rgba(6,6,10,.74);backdrop-filter:blur(6px);
+}
+.dx-modal.is-open{display:flex}
+.dx-modal-box{
+  width:min(520px,100%);background:#1a1a22;border:1px solid var(--dx-line2);
+  border-radius:18px;padding:26px;position:relative;max-height:86vh;overflow:auto;
+}
+.dx-modal-box h3{font-size:19px;margin-bottom:6px}
+.dx-modal-box>p{font-size:13.4px;color:var(--dx-mut);margin-bottom:16px}
+.dx-modal-close{position:absolute;right:14px;top:12px;width:32px;height:32px;border-radius:9px;font-size:18px;color:var(--dx-mut);background:rgba(255,255,255,.05)}
+.dx-modal-close:hover{color:#fff}
+.dx-field{margin-bottom:13px}
+.dx-field label{display:block;font-size:12.4px;color:var(--dx-mut);margin-bottom:6px}
+.dx-field input,.dx-field textarea{
+  width:100%;background:#12121a;border:1px solid var(--dx-line2);border-radius:10px;
+  padding:10px 13px;font-size:13.6px;color:#fff;outline:none;resize:vertical;
+}
+.dx-field input:focus,.dx-field textarea:focus{border-color:var(--dx-cyan)}
+.dx-share-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.dx-share-row button{flex:1;min-width:100px;padding:12px;border-radius:11px;background:rgba(255,255,255,.055);border:1px solid var(--dx-line2);font-size:13.4px;font-weight:700}
+.dx-share-row button:hover{border-color:var(--dx-hot2);color:var(--dx-hot2)}
+.dx-to-top-cta{display:flex;gap:10px;justify-content:flex-end;margin-top:18px}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- ================= S1 公告条 + 页头（一体吸顶） ================= -->
+<div class="dx-stick">
+  <div class="dx-notice" role="region" aria-label="站点最新公告">
+    <div class="dx-wrap dx-notice-in">
+      <span class="dx-notice-tag">官方发布</span>
+      <ul class="dx-notice-list">
+        <li><span class="dx-notice-dot"></span>《城市切片·夜行者》第 3 季<b>11 月 24 日</b>上线，共 8 集</li>
+        <li><span class="dx-notice-dot"></span>年度纪录片企划《大象的走廊》<b>开放联合出品报名</b></li>
+        <li><span class="dx-notice-dot"></span>创作者激励计划 2026 冬季场<b>内容上传通道已开启</b></li>
+      </ul>
+      <a class="dx-notice-more" href="#dx-news">全部动态</a>
+    </div>
+  </div>
+
+  <header class="dx-header">
+    <div class="dx-wrap dx-header-in">
+      <a class="dx-logo" href="#dx-top" aria-label="大象视频传媒官网首页">
+        <svg class="dx-logo-mark" viewBox="0 0 64 64" role="img" aria-label="大象视频传媒品牌标志的橙色象形几何图形">
+          <defs>
+            <linearGradient id="dxLogoG" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff8a3d"/><stop offset="1" stop-color="#ff5a1f"/>
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="14" fill="#1a1a20"/>
+          <path d="M18 22c0-6 6-9 13-9 9 0 15 5 15 13 0 6-4 9-4 13 0 3 2 4 2 8 0 4-3 7-8 7-4 0-7-2-9-5" stroke="url(#dxLogoG)" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <circle cx="38" cy="24" r="3" fill="#ffd166"/>
+        </svg>
+        <span class="dx-logo-txt">
+          <strong>大象视频传媒</strong>
+          <span>Elephant Visual Media</span>
+        </span>
+      </a>
+
+      <nav class="dx-nav" aria-label="主导航">
+        <a href="#dx-focus">焦点内容</a>
+        <a href="#dx-about">关键词解析</a>
+        <a href="#dx-topics">专题企划</a>
+        <a href="#dx-creators">创作者</a>
+        <a href="#dx-rank">数据榜单</a>
+        <a href="#dx-faq">常见问题</a>
+      </nav>
+
+      <div class="dx-search-wrap">
+        <form class="dx-search" id="dxSearchForm" role="search" autocomplete="off">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="#9a9aa8" stroke-width="2"/><path d="M16.5 16.5 21 21" stroke="#9a9aa8" stroke-width="2" stroke-linecap="round"/></svg>
+          <input type="search" id="dxSearchInput" placeholder="搜索原创视频、创作者、专题" aria-label="站内搜索">
+          <button type="submit" aria-label="提交搜索">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+        <div class="dx-search-res" id="dxSearchRes" role="status" aria-live="polite"></div>
+      </div>
+
+      <button class="dx-burger" id="dxBurger" aria-expanded="false" aria-controls="dxMobileNav" aria-label="展开导航菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="dx-mobile-nav" id="dxMobileNav">
+      <ul>
+        <li><a href="#dx-focus">焦点内容</a></li>
+        <li><a href="#dx-about">关键词解析</a></li>
+        <li><a href="#dx-topics">专题企划</a></li>
+        <li><a href="#dx-creators">创作者</a></li>
+        <li><a href="#dx-rank">数据榜单</a></li>
+        <li><a href="#dx-faq">常见问题</a></li>
+      </ul>
+    </div>
+  </header>
+</div>
+
+<main id="dx-top">
+
+  <!-- ================= S2 品牌首屏 ================= -->
+  <section class="dx-hero" aria-labelledby="dxHeroTitle">
+    <div class="dx-wrap dx-hero-grid">
+      <div>
+        <span class="dx-eyebrow">企业官方视频门户 · 原创正版高清</span>
+        <h1 id="dxHeroTitle">大象视频传媒<em>官网</em></h1>
+        <p class="dx-hero-lead">
+          以影像记录真实，用内容连接人。<strong>大象视频传媒</strong>是一家专注原创纪录片、品牌影像与创作者孵化的视频内容企业，
+          我们围绕「慢下来，看得更远」的品牌主张，持续为中国观众提供有品质、有温度、值得信赖的精品内容。
+        </p>
+        <p class="dx-hero-intro">
+          作为深耕纪实与品牌影像垂直领域的视频传媒企业，大象视频传媒官网面向创作者、品牌方与普通观众提供一体化内容服务：
+          从选题策划、拍摄制作到高清正版分发与社区运营，我们搭建起完整的内容生态。平台累计上线原创作品逾 2600 部，
+          签约与入驻创作者超过 900 位，与 40 余家品牌伙伴建立长期共创关系，用户首选的原因始终是「真实」与「匠心」。
+        </p>
+
+        <div class="dx-hero-actions">
+          <a class="dx-btn dx-btn--primary" href="#dx-focus">观看焦点内容
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+          </a>
+          <button class="dx-btn dx-btn--ghost" type="button" data-dx-open="submit">投稿与报名</button>
+          <a class="dx-btn dx-btn--ghost" href="#dx-about">了解品牌故事</a>
+        </div>
+
+        <div class="dx-hero-stats">
+          <div class="dx-hero-stat"><b>2600<i>+</i></b><span>原创正版作品</span></div>
+          <div class="dx-hero-stat"><b>9.62<i>亿</i></b><span>累计高清播放</span></div>
+          <div class="dx-hero-stat"><b>920<i>+</i></b><span>入驻创作者</span></div>
+        </div>
+      </div>
+
+      <div class="dx-hero-visual">
+        <svg viewBox="0 0 800 550" role="img" aria-label="大象视频传媒首屏主视觉：黄昏山谷中架起的摄影机与远处行进的大象剪影">
+          <defs>
+            <linearGradient id="dxSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2b1c33"/><stop offset=".45" stop-color="#7a3340"/>
+              <stop offset=".72" stop-color="#d1622f"/><stop offset="1" stop-color="#f5a75b"/>
+            </linearGradient>
+            <linearGradient id="dxMount" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#3a2233"/><stop offset="1" stop-color="#160f18"/>
+            </linearGradient>
+            <linearGradient id="dxMount2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#5a2f3c"/><stop offset="1" stop-color="#241722"/>
+            </linearGradient>
+            <radialGradient id="dxSun" cx=".5" cy=".5" r=".5">
+              <stop offset="0" stop-color="#ffe6a8"/><stop offset=".6" stop-color="#ffb45a"/><stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="800" height="550" fill="url(#dxSky)"/>
+          <circle cx="588" cy="252" r="126" fill="url(#dxSun)" opacity=".92"/>
+          <circle cx="588" cy="252" r="46" fill="#fff3cf"/>
+          <g opacity=".85">
+            <circle cx="120" cy="88" r="2.4" fill="#ffe9c6"/><circle cx="220" cy="58" r="1.8" fill="#ffe9c6"/>
+            <circle cx="342" cy="104" r="2" fill="#ffe9c6"/><circle cx="470" cy="66" r="1.6" fill="#ffe9c6"/>
+            <circle cx="700" cy="108" r="2.2" fill="#ffe9c6"/><circle cx="636" cy="42" r="1.5" fill="#ffe9c6"/>
+          </g>
+          <path d="M0 356 148 236 268 322 386 214 520 336 646 258 800 358V550H0Z" fill="url(#dxMount2)" opacity=".78"/>
+          <path d="M0 424 118 340 236 402 356 316 500 414 624 344 800 430V550H0Z" fill="url(#dxMount)"/>
+          <!-- 地平线光带 -->
+          <rect y="424" width="800" height="3" fill="#ffbf7a" opacity=".5"/>
+          <!-- 远处象群剪影 -->
+          <g fill="#0f0a12" opacity=".92">
+            <path d="M556 424c0-14 11-23 26-23s27 8 27 22c0 5-2 7-2 12 0 4 2 5 2 8 0 4-3 6-7 6s-7-2-8-6c-1 5-6 8-12 8-8 0-14-5-14-13 0-4 1-6 1-9-6 0-13 1-13-5z"/>
+            <path d="M638 428c0-11 8-18 20-18s21 6 21 17c0 4-1 5-1 9 0 3 1 4 1 6 0 3-2 5-5 5s-5-2-6-5c-1 4-4 6-9 6-6 0-11-4-11-10 0-3 1-5 1-7-5 0-11 1-11-3z"/>
+            <path d="M492 430c0-9 7-15 17-15s18 5 18 14c0 3-1 5-1 8 0 2 1 3 1 5 0 3-2 4-4 4-3 0-5-1-5-4-1 3-4 5-8 5-5 0-9-3-9-8 0-3 1-4 1-6-4 0-10 0-10-3z"/>
+          </g>
+          <!-- 前景三脚架摄影机 -->
+          <g>
+            <path d="M232 500 268 402M268 500 268 402M300 500 268 402" stroke="#0b070d" stroke-width="9" stroke-linecap="round"/>
+            <rect x="228" y="362" width="80" height="46" rx="8" fill="#0e0910"/>
+            <rect x="300" y="376" width="34" height="20" rx="5" fill="#191020"/>
+            <circle cx="316" cy="386" r="8" fill="#3ee9d0" opacity=".85"/>
+            <rect x="240" y="346" width="26" height="18" rx="4" fill="#0e0910"/>
+            <circle cx="368" cy="386" r="4" fill="#ffd166"/>
+          </g>
+          <!-- 近景草丛 -->
+          <g fill="#0a060c">
+            <path d="M0 550v-52c22 12 30 4 48 18 14 11 30 6 44 20 16 16 42 12 60 26H0z"/>
+            <path d="M800 550v-58c-26 14-38 4-58 20-16 13-34 8-50 24-16 18-46 12-66 28h174z"/>
+          </g>
+          <g opacity=".55">
+            <path d="M96 512c8-14 12-18 18-26M120 520c6-16 10-22 16-30M700 516c-8-16-12-22-18-30" stroke="#ffb27a" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <span class="dx-hero-badge"><span class="dx-hero-live"></span>正在热播 · 纪实季</span>
+        <div class="dx-hero-caption">
+          <strong>《大象的走廊》第 2 集：一条峡谷的十年</strong>
+          <span>4K 高清 · 46 分钟 · 摄影：林舟 ｜ 出品：大象视频传媒</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S3 焦点内容 + 视频文字列表 ================= -->
+  <section class="dx-sec" id="dx-focus" aria-labelledby="dxFocusTitle">
+    <div class="dx-wrap">
+      <div class="dx-sec-head">
+        <div>
+          <span class="dx-eyebrow">Focus · 本周焦点</span>
+          <h2 id="dxFocusTitle">大象视频传媒官网本周焦点：一部重点影像 + 六条原创视频精选</h2>
+        </div>
+        <p class="dx-sec-desc">焦点内容由官方编辑部与社区共同推选，覆盖纪实、城市、人文与品牌故事，全部为高清正版首发。</p>
+      </div>
+
+      <div class="dx-feature-grid">
+        <article class="dx-feature-main">
+          <figure>
+            <svg viewBox="0 0 800 450" role="img" aria-label="焦点纪录片《一条峡谷的十年》封面：晨雾中的峡谷与单人远足剪影">
+              <defs>
+                <linearGradient id="dxFgSky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#0e2230"/><stop offset=".55" stop-color="#22505c"/><stop offset="1" stop-color="#8fc0b1"/>
+                </linearGradient>
+                <linearGradient id="dxFgRock" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#1b3a41"/><stop offset="1" stop-color="#0a1a20"/>
+                </linearGradient>
+              </defs>
+              <rect width="800" height="450" fill="url(#dxFgSky)"/>
+              <g fill="#dfeee8" opacity=".16">
+                <ellipse cx="180" cy="150" rx="150" ry="26"/><ellipse cx="560" cy="110" rx="190" ry="22"/>
+                <ellipse cx="640" cy="196" rx="150" ry="18"/>
+              </g>
+              <path d="M0 258 96 196 176 246 258 170 348 240 452 152 560 236 660 176 800 250V450H0Z" fill="#173039" opacity=".9"/>
+              <path d="M0 330 118 276 222 330 330 268 452 336 566 282 690 344 800 300V450H0Z" fill="url(#dxFgRock)"/>
+              <path d="M340 450 372 336 404 450Z" fill="#0d2026"/>
+              <g>
+                <circle cx="372" cy="300" r="5" fill="#ffd9b0"/>
+                <path d="M372 306v22M372 316l-8 10M372 316l8 10M372 328l-6 16M372 328l6 16" stroke="#ffd9b0" stroke-width="2.6" stroke-linecap="round"/>
+              </g>
+              <g fill="#0b1b21" opacity=".85">
+                <path d="M120 450c14-40 24-58 40-74 10-10 22-6 20 8-2 16-14 34-20 66z"/>
+                <path d="M650 450c-16-46-26-64-44-80-10-10-22-6-20 8 2 16 16 36 22 72z"/>
+              </g>
+              <rect x="20" y="20" width="112" height="28" rx="8" fill="#0a0a0e" opacity=".72"/>
+              <text x="34" y="39" fill="#ffd166" font-family="sans-serif" font-size="15" font-weight="700">正版首发 4K</text>
+            </svg>
+            <button class="dx-play" type="button" data-dx-open="play" aria-label="播放焦点纪录片《一条峡谷的十年》预告">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="#16100a"/></svg>
+            </button>
+          </figure>
+          <div class="dx-feature-body">
+            <h3>《一条峡谷的十年》：跟拍一个村庄的转身</h3>
+            <p>摄制组用十年时间记录云南西南部一条峡谷里的村落变迁：从修路、通电到年轻人返乡开民宿。没有旁白说教，只有四季的更替和村民自己的声音。本片为平台年度重点原创作品，由官方纪录片工作室独家出品。</p>
+            <div class="dx-meta">
+              <span class="dx-author">@峡谷影像组</span>
+              <span>纪实 · 长片</span>
+              <span>46:12</span>
+              <span>4K 高清</span>
+            </div>
+            <div class="dx-act" data-dx-likegroup>
+              <button type="button" data-dx-like><span class="dx-heart">♡</span> 点赞 <b>3.42万</b></button>
+              <button type="button" data-dx-fav><span class="dx-heart">♡</span> 收藏 <b>1.18万</b></button>
+              <button type="button" data-dx-share>分享</button>
+              <button type="button" data-dx-open="report">反馈</button>
+            </div>
+          </div>
+        </article>
+
+        <div>
+          <div class="dx-vlist" id="dxVideoList">
+            <article class="dx-vitem">
+              <span class="dx-vnum">01</span>
+              <div>
+                <a class="dx-vtitle" href="#dx-focus">夜行者：凌晨三点的城市补给线</a>
+                <p class="dx-vdesc">跟随三位夜班工作者走过整条城市动脉，记录被白天忽略的那一半生活。</p>
+                <div class="dx-vtags"><span>城市探索</span><span>日常记录</span></div>
+              </div>
+              <div class="dx-vstats"><b>128.6万</b>播放 · 2.1万赞</div>
+            </article>
+            <article class="dx-vitem">
+              <span class="dx-vnum">02</span>
+              <div>
+                <a class="dx-vtitle" href="#dx-focus">一部纪录片是怎么剪出来的：后期机房 72 小时</a>
+                <p class="dx-vdesc">从 40 小时素材到 46 分钟成片，剪辑师带你拆解结构、节奏与声音设计。</p>
+                <div class="dx-vtags"><span>创作幕后</span><span>教程干货</span></div>
+              </div>
+              <div class="dx-vstats"><b>96.3万</b>播放 · 1.7万赞</div>
+            </article>
+            <article class="dx-vitem">
+              <span class="dx-vnum">03</span>
+              <div>
+                <a class="dx-vtitle" href="#dx-focus">老匠人的第七十三把椅子</a>
+                <p class="dx-vdesc">一间开了四十年的木工坊，和一位不肯用机器替代手工的老师傅。</p>
+                <div class="dx-vtags"><span>匠心</span><span>人物访谈</span></div>
+              </div>
+              <div class="dx-vstats"><b>84.1万</b>播放 · 1.9万赞</div>
+            </article>
+            <article class="dx-vitem">
+              <span class="dx-vnum">04</span>
+              <div>
+                <a class="dx-vtitle" href="#dx-focus">为什么我们坚持用自然光拍摄</a>
+                <p class="dx-vdesc">摄影师拆解六个实拍场景，讲清楚一次布光的取舍与判断逻辑。</p>
+                <div class="dx-vtags"><span>实用技巧</span><span>深度测评</span></div>
+              </div>
+              <div class="dx-vstats"><b>73.5万</b>播放 · 1.2万赞</div>
+            </article>
+            <article class="dx-vitem">
+              <span class="dx-vnum">05</span>
+              <div>
+                <a class="dx-vtitle" href="#dx-focus">大象的走廊：一次关于迁徙的 8K 尝试</a>
+                <p class="dx-vdesc">团队在野外驻扎 45 天，如何在不可控的自然里等到想要的画面。</p>
+                <div class="dx-vtags"><span>科技前沿</span><span>户外活动</span></div>
+              </div>
+              <div class="dx-vstats"><b>65.8万</b>播放 · 9800 赞</div>
+            </article>
+            <article class="dx-vitem">
+              <span class="dx-vnum">06</span>
+              <div>
+                <a class="dx-vtitle" href="#dx-focus">县城咖啡馆的一百个下午</a>
+                <p class="dx-vdesc">在一座常住人口不足八万的小城，观察一间咖啡馆如何成为社区客厅。</p>
+                <div class="dx-vtags"><span>生活方式</span><span>情感故事</span></div>
+              </div>
+              <div class="dx-vstats"><b>58.2万</b>播放 · 1.1万赞</div>
+            </article>
+          </div>
+          <p style="font-size:12.5px;color:var(--dx-mut2);margin-top:16px">视频排序依据近 7 日站内播放与收藏综合计算，数据每日 06:00 更新。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S4 关键词解析长文（品牌深度） ================= -->
+  <section class="dx-sec" id="dx-about" aria-labelledby="dxAboutTitle">
+    <div class="dx-wrap">
+      <div class="dx-longread">
+        <span class="dx-eyebrow">Deep Read · 品牌深度解析</span>
+        <h2 id="dxAboutTitle">关于大象视频传媒官网，你需要了解的全部</h2>
+
+        <h3>一家视频传媒企业，为什么以「大象」命名</h3>
+        <p>2016 年春天，大象视频传媒的第一支团队在城郊一间旧仓库里成立。创始人给公司取名「大象」，并非因为喜欢某种动物，而是因为一个朴素的观察：<strong>大象走得慢，但从不迷路；它记得水源、记得路、记得同伴。</strong>这恰好是团队对影像的理解——在一个内容更新速度以小时计的时代，仍然有人愿意花一年时间跟拍一个村庄，愿意为了等一场雨在野外多待十二天。</p>
+        <p>于是「慢下来，看得更远」成为这家企业最早写进公司章程的一句话。官网首页保留了这个句子，它并不是营销口号，而是选题会上真正会用来否决项目的标准：如果一个选题快到无法被认真观察，我们通常不做。这份克制，让大象视频传媒在成立后的十年里始终保有稳定的用户口碑，也让品牌故事本身成为内容的源头。</p>
+        <p>需要说清楚的是，<strong>官网</strong>在这里担纲的角色并非一个作品陈列柜。我们把它当作一条长期对外开放的通道：创作者可以在这里看到官方在拍什么、准备拍什么；品牌方可以看到我们的内容标准与制作流程；观众可以在这里找到成品、幕后和延伸的讨论。一个视频传媒企业的透明度，最终会体现在它敢不敢把「没做好的部分」也说出来。</p>
+
+        <h3>内容生态是怎么搭起来的：三条生产线与一张投稿网</h3>
+        <p>目前大象视频传媒的内容由三条生产线共同供给。第一条是<strong>官方自研纪实线</strong>，每年完成 6 至 9 部中长片，题材集中在城乡变迁、手艺人、自然观察与产业一线，这条线不追热点，只保证每年有作品能进入长期片库；第二条是<strong>品牌影像线</strong>，为合作企业提供从策划到交付的完整服务，我们坚持在商业项目里保留真实的拍摄方法与真实的人；第三条是<strong>社区共创线</strong>，来自 900 多位入驻创作者的投稿与联合制作，这条线构成了平台里最活跃、最多元的部分。</p>
+        <p>三条线之间并非平行。社区里口碑较好的短片，会被编辑部邀请进入正式孵化；官方纪录片在后期阶段，也会开放素材给社区做二次创作挑战。我们内部把这种机制称为「一张网」——作品不是被生产出来的，而是被反复打磨和讨论出来的。每一季的投稿入口都会在官网公开，审核标准、排期节奏、分成方式都写在说明页里，不设隐形门槛。</p>
+
+        <h3>高清、正版与品质：三条不能妥协的底线</h3>
+        <p>视频平台最容易被忽略的成本是「清晰度背后的工作量」。在大象视频传媒，一部 46 分钟的纪录片从拍摄到上线，平均要经过 5 轮画面调色、3 轮声音混录和 1 轮终版技术检测，输出规格覆盖 4K、1080P 与移动端适配三档。<strong>我们不做「高清」二字的含糊宣传，而是把每一档码率、每一个封装格式写进服务说明。</strong>这不仅是为了观感，也是为了让合作方的素材库在五年后依然可用。</p>
+        <p>正版方面，平台所有上线作品均签署授权文件，音乐、字体、影像素材均有来源凭证。我们曾因为一首背景音乐的授权范围不清晰，主动把已上线两周的成片下架重制——那次损失不小，但它让团队记住了底线在哪。品质不是一句形容词，它是一连串可以复核的记录：拍摄日志、授权清单、审片意见、版本记录，这些文件在官网的合作页面均可申请查阅摘要。</p>
+
+        <h3>创作者社区与持续运营：一个长期主义的答案</h3>
+        <p>过去几年，「内容平台」这个词被用得太随意。对大象视频传媒而言，社区意味着具体的责任：新人上传的第一支片，48 小时内会收到一条由真人写下的反馈；季度评选中，落选的作者可以申请调取评审意见；创作者的作品被商业项目引用时，分成比例与结算周期在合同里写死。我们不承诺流量，但承诺规则稳定。</p>
+        <p>所谓持续运营，是承认内容行业有淡季，也有会让人怀疑自己的时刻。因此官网保留了「创作灵感」与「企业动态」两个看起来不那么商业的板块：前者分享选题思路、脚本结构和剪辑方案，后者如实记录团队在做什么、遇到什么困难。这些板块没有点击率指标，但它们构成了品牌最真实的一面，也解释了为什么许多用户把这里当作「用户首选」的影像社区，而不是又一个短视频入口。</p>
+
+        <div class="dx-quotelist">
+          <div><b>2016</b>品牌创立，首部短片《仓库里的春天》上线</div>
+          <div><b>2020</b>成立纪录片工作室，启动十年跟拍计划</div>
+          <div><b>2024</b>创作者社区开放，入驻作者突破 600 位</div>
+          <div><b>2026</b>上线 4K 片库与联合出品机制，作品逾 2600 部</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S4 专题企划 ================= -->
+  <section class="dx-sec" id="dx-topics" aria-labelledby="dxTopicsTitle">
+    <div class="dx-wrap">
+      <div class="dx-sec-head">
+        <div>
+          <span class="dx-eyebrow">Series · 专题企划</span>
+          <h2 id="dxTopicsTitle">四个正在更新的专题企划，构成官网的长期内容骨架</h2>
+        </div>
+        <p class="dx-sec-desc">每个专题以季度为单位更新，由官方编辑部与特约创作者共同维护，支持投票选题。</p>
+      </div>
+
+      <div class="dx-topic-grid">
+        <article class="dx-topic">
+          <div class="dx-topic-top">
+            <h3>城市切片</h3>
+            <span class="dx-chip dx-chip--hot">更新至 S3</span>
+          </div>
+          <div class="dx-topic-img">
+            <svg viewBox="0 0 640 320" role="img" aria-label="专题《城市切片》配图：夜色中交错的立交桥与车灯光轨">
+              <defs><linearGradient id="dxTp1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101b2b"/><stop offset="1" stop-color="#2a3f5c"/></linearGradient></defs>
+              <rect width="640" height="320" fill="url(#dxTp1)"/>
+              <g fill="#182a3e"><rect x="30" y="150" width="46" height="170"/><rect x="92" y="106" width="36" height="214"/><rect x="146" y="176" width="54" height="144"/><rect x="452" y="128" width="44" height="192"/><rect x="512" y="164" width="58" height="156"/><rect x="586" y="98" width="34" height="222"/></g>
+              <g fill="#ffd166" opacity=".85"><rect x="42" y="168" width="8" height="8"/><rect x="60" y="192" width="8" height="8"/><rect x="102" y="126" width="8" height="8"/><rect x="462" y="148" width="8" height="8"/><rect x="530" y="188" width="8" height="8"/><rect x="596" y="120" width="8" height="8"/></g>
+              <path d="M0 258c130-34 220-12 320 4s210 26 320-8" stroke="#ff7a3d" stroke-width="6" fill="none" opacity=".9"/>
+              <path d="M0 282c150-26 240-4 330 10s190 18 310-14" stroke="#3ee9d0" stroke-width="4" fill="none" opacity=".65"/>
+              <g stroke="#ffb27a" stroke-width="3" opacity=".55"><path d="M120 320 200 240M520 320 440 240"/></g>
+            </svg>
+          </div>
+          <p>以一座城市的一个切面为单位，记录被速度掩盖的生活细节。已覆盖 11 座城市。</p>
+          <ul>
+            <li>夜行者：凌晨三点的城市补给线</li>
+            <li>早市最后一天：一个菜场的搬迁</li>
+            <li>在城中村开书店的第七年</li>
+          </ul>
+        </article>
+
+        <article class="dx-topic">
+          <div class="dx-topic-top">
+            <h3>手艺不熄</h3>
+            <span class="dx-chip">连载中 · 12 集</span>
+          </div>
+          <p>聚焦仍在坚持手工的匠人。镜头不评价新旧，只呈现选择背后的代价与温度。</p>
+          <ul>
+            <li>老匠人的第七十三把椅子</li>
+            <li>一把刻刀用二十年会变成什么样</li>
+            <li>被机器替代之后，他们去做什么了</li>
+          </ul>
+        </article>
+
+        <article class="dx-topic">
+          <div class="dx-topic-top">
+            <h3>走廊计划</h3>
+            <span class="dx-chip">联合出品 · 报名中</span>
+          </div>
+          <p>自然观察与影像技术的交叉实验，尝试在野外不打扰的前提下完成高品质拍摄。</p>
+          <ul>
+            <li>大象的走廊：一次关于迁徙的 8K 尝试</li>
+            <li>夜视镜头下的城市边缘生物</li>
+            <li>在雨季里等一场晴天</li>
+          </ul>
+        </article>
+
+        <article class="dx-topic">
+          <div class="dx-topic-top">
+            <h3>小城下午三点</h3>
+            <span class="dx-chip dx-chip--mut">筹备中 · 投票选题</span>
+          </div>
+          <p>短纪录片合集，每集 8 分钟，记录县域生活里那些被忽略的平静时刻。</p>
+          <ul>
+            <li>县城咖啡馆的一百个下午</li>
+            <li>一位中学图书管理员的一天</li>
+            <li>跨省通勤者的周五傍晚</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S5 创作者矩阵（双列简介） ================= -->
+  <section class="dx-sec" id="dx-creators" aria-labelledby="dxCreatorsTitle">
+    <div class="dx-wrap">
+      <div class="dx-sec-head">
+        <div>
+          <span class="dx-eyebrow">Creators · 创作者矩阵</span>
+          <h2 id="dxCreatorsTitle">官网签约与入驻创作者，是内容生态最真实的底色</h2>
+        </div>
+        <p class="dx-sec-desc">点击「作者档案」查看创作方向与合作方式，长期接受联合制作申请。</p>
+      </div>
+
+      <div class="dx-authors">
+        <article class="dx-author-card">
+          <div class="dx-avatar"><svg viewBox="0 0 64 64" role="img" aria-label="创作者林舟的头像：深蓝色圆形底与橙色山形插画"><rect width="64" height="64" fill="#1d2f45"/><path d="M8 46 24 24 36 40 46 30 58 46z" fill="#ff8a3d"/><circle cx="20" cy="18" r="6" fill="#ffd166"/></svg></div>
+          <div>
+            <div class="dx-author-name">林舟 <span class="dx-chip dx-chip--mut">官方签约</span></div>
+            <div class="dx-author-field">自然与户外纪实 · 摄影师</div>
+            <div class="dx-author-nums"><span>作品 <b>86</b></span><span>粉丝 <b>42.6万</b></span></div>
+          </div>
+          <p class="dx-author-bio">在野外工作十二年，擅长在极端光线与天气下等待画面。代表作《一条峡谷的十年》《走廊计划·夜视》。拍摄前会用两周时间只走路不带机器，他说这是为了先认识地形，再认识故事。</p>
+          <button class="dx-btn dx-btn--ghost dx-btn--mini" type="button" data-dx-open="author" data-dx-name="林舟" data-dx-field="自然与户外纪实 · 摄影师" data-dx-bio="在野外工作十二年，擅长在极端光线与天气下等待画面。代表作《一条峡谷的十年》《走廊计划·夜视》。共同维护走廊计划的技术标准部分。">作者档案</button>
+        </article>
+
+        <article class="dx-author-card">
+          <div class="dx-avatar"><svg viewBox="0 0 64 64" role="img" aria-label="创作者苏禾的头像：粉色圆形底与白色胶片图形"><rect width="64" height="64" fill="#3b1f33"/><rect x="12" y="18" width="40" height="28" rx="5" fill="#ffb0c8"/><g fill="#3b1f33"><rect x="16" y="22" width="6" height="4"/><rect x="16" y="34" width="6" height="4"/><rect x="42" y="22" width="6" height="4"/><rect x="42" y="34" width="6" height="4"/></g><circle cx="32" cy="32" r="8" fill="#3b1f33"/></svg></div>
+          <div>
+            <div class="dx-author-name">苏禾 <span class="dx-chip">剪辑导师</span></div>
+            <div class="dx-author-field">纪录片剪辑 · 后期教学</div>
+            <div class="dx-author-nums"><span>作品 <b>64</b></span><span>粉丝 <b>31.2万</b></span></div>
+          </div>
+          <p class="dx-author-bio">剪辑十年，参与平台 20 余部长片的后期制作。她在官网开设「后期机房」系列，把真实项目的粗剪版本拿出来逐段讲解，被很多新人当作入门教材。坚持一件事：先想清楚观众什么时候会想休息。</p>
+          <button class="dx-btn dx-btn--ghost dx-btn--mini" type="button" data-dx-open="author" data-dx-name="苏禾" data-dx-field="纪录片剪辑 · 后期教学" data-dx-bio="剪辑十年，参与平台 20 余部长片的后期制作。官网「后期机房」系列主讲，擅长把复杂的叙事结构拆成可执行的步骤。">作者档案</button>
+        </article>
+
+        <article class="dx-author-card">
+          <div class="dx-avatar"><svg viewBox="0 0 64 64" role="img" aria-label="创作者周野的头像：墨绿色圆形底与黄色城市天际线"><rect width="64" height="64" fill="#12302a"/><g fill="#ffd166"><rect x="10" y="30" width="8" height="24"/><rect x="22" y="22" width="8" height="32"/><rect x="34" y="34" width="8" height="20"/><rect x="46" y="26" width="8" height="28"/></g><circle cx="48" cy="16" r="6" fill="#3ee9d0"/></svg></div>
+          <div>
+            <div class="dx-author-name">周野 <span class="dx-chip dx-chip--hot">新人榜第一</span></div>
+            <div class="dx-author-field">城市探索 · 街头采访</div>
+            <div class="dx-author-nums"><span>作品 <b>39</b></span><span>粉丝 <b>27.8万</b></span></div>
+          </div>
+          <p class="dx-author-bio">从一台二手相机开始拍城市，习惯凌晨出门、天亮回家。他的《城市切片》投稿三条全部入选官方企划，是目前社区里最受关注的年轻作者。方法论简单：先跟人聊，再开机；先关掉监视器，再决定要不要拍第二遍。</p>
+          <button class="dx-btn dx-btn--ghost dx-btn--mini" type="button" data-dx-open="author" data-dx-name="周野" data-dx-field="城市探索 · 街头采访" data-dx-bio="从一台二手相机开始拍城市，习惯凌晨出门、天亮回家。《城市切片》三条投稿全部入选官方企划，擅长在不打扰的前提下得到真实对话。">作者档案</button>
+        </article>
+
+        <article class="dx-author-card">
+          <div class="dx-avatar"><svg viewBox="0 0 64 64" role="img" aria-label="创作者陈屿的头像：土黄色圆形底与白色手工工具图形"><rect width="64" height="64" fill="#4a3418"/><path d="M20 44 34 22l8 10 6-8 4 20z" fill="#ffe1b0"/><rect x="14" y="46" width="36" height="4" rx="2" fill="#ff8a3d"/></svg></div>
+          <div>
+            <div class="dx-author-name">陈屿 <span class="dx-chip">匠人记录</span></div>
+            <div class="dx-author-field">手工艺 · 人物访谈</div>
+            <div class="dx-author-nums"><span>作品 <b>52</b></span><span>粉丝 <b>19.4万</b></span></div>
+          </div>
+          <p class="dx-author-bio">做过六年木工，后来拿起摄影机拍同行。他拍匠人有个规矩：不预设「坚守」这个词，也不问「为什么不放弃」。作品节奏很慢，但每一集都能让人记住具体的工具声与工作台的气味，是官网口碑最稳的一档栏目。</p>
+          <button class="dx-btn dx-btn--ghost dx-btn--mini" type="button" data-dx-open="author" data-dx-name="陈屿" data-dx-field="手工艺 · 人物访谈" data-dx-bio="做过六年木工，后来拿起摄影机拍同行。拍匠人不预设「坚守」，只记录具体的工作与生活，作品在官网口碑评分长期居前。">作者档案</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S6 榜单 + 评价 ================= -->
+  <section class="dx-sec" id="dx-rank" aria-labelledby="dxRankTitle">
+    <div class="dx-wrap">
+      <div class="dx-sec-head">
+        <div>
+          <span class="dx-eyebrow">Ranking &amp; Voices</span>
+          <h2 id="dxRankTitle">数据榜单与真实评价，让品质有可衡量的依据</h2>
+        </div>
+        <p class="dx-sec-desc">榜单每周一更新；评价来自官网作品页的真实留言，已做匿名化处理。</p>
+      </div>
+
+      <div class="dx-rank-grid">
+        <div class="dx-rank">
+          <div class="dx-rank-tabs" role="tablist" aria-label="榜单分类">
+            <button type="button" class="is-active" data-dx-rank="hot" role="tab" aria-selected="true">热度榜</button>
+            <button type="button" data-dx-rank="new" role="tab" aria-selected="false">新人榜</button>
+            <button type="button" data-dx-rank="praise" role="tab" aria-selected="false">口碑榜</button>
+          </div>
+          <ol id="dxRankList">
+            <li><span><span class="dx-rk-t">一条峡谷的十年</span><br><span class="dx-rk-s">峡谷影像组 · 纪实长片</span></span><span>128.6万</span></li>
+            <li><span><span class="dx-rk-t">夜行者：城市补给线</span><br><span class="dx-rk-s">周野 · 城市探索</span></span><span>96.3万</span></li>
+            <li><span><span class="dx-rk-t">第七十三把椅子</span><br><span class="dx-rk-s">陈屿 · 匠人记录</span></span><span>84.1万</span></li>
+            <li><span><span class="dx-rk-t">后期机房 72 小时</span><br><span class="dx-rk-s">苏禾 · 剪辑教学</span></span><span>73.5万</span></li>
+            <li><span><span class="dx-rk-t">县城咖啡馆的一百个下午</span><br><span class="dx-rk-s">小城影像计划</span></span><span>58.2万</span></li>
+            <li><span><span class="dx-rk-t">为什么我们坚持自然光</span><br><span class="dx-rk-s">林舟 · 摄影方法</span></span><span>51.9万</span></li>
+          </ol>
+        </div>
+
+        <div>
+          <div class="dx-comments">
+            <article class="dx-comment">
+              <div class="dx-comment-h">
+                <span class="dx-comment-av" style="background:#ffb27a">阿</span>
+                <div><div class="dx-comment-n">阿岚</div><div class="dx-comment-t">观看 3 年 · 收藏 214 部</div></div>
+              </div>
+              <p>「一条峡谷的十年」我看完坐在沙发上发了很久的呆。没有煽情的配乐，没有刻意的高潮，就是十年慢慢过去。这是我在这个官网待了三年的原因。</p>
+              <div class="dx-comment-f"><span class="dx-stars">★★★★★</span><span>有帮助 1.2万</span></div>
+            </article>
+
+            <article class="dx-comment">
+              <div class="dx-comment-h">
+                <span class="dx-comment-av" style="background:#3ee9d0">木</span>
+                <div><div class="dx-comment-n">木下三寸</div><div class="dx-comment-t">创作者 · 入驻 8 个月</div></div>
+              </div>
+              <p>作为新人，第一支片上传后 36 小时就收到了编辑的逐条反馈，还指出了我片尾字幕的一个错字。这种认真程度，比我待过的任何平台都好。</p>
+              <div class="dx-comment-f"><span class="dx-stars">★★★★★</span><span>有帮助 8600</span></div>
+            </article>
+
+            <article class="dx-comment">
+              <div class="dx-comment-h">
+                <span class="dx-comment-av" style="background:#ffd166">老</span>
+                <div><div class="dx-comment-n">老周不加班</div><div class="dx-comment-t">观看 1 年</div></div>
+              </div>
+              <p>建议后期机房系列能多出几期调色的内容，现在剪辑讲得很细，调色相对少一点。整体还是很好，就是更新慢（笑）。</p>
+              <div class="dx-comment-f"><span class="dx-stars">★★★★☆</span><span>有帮助 4320</span></div>
+            </article>
+
+            <article class="dx-comment">
+              <div class="dx-comment-h">
+                <span class="dx-comment-av" style="background:#c7b3ff">南</span>
+                <div><div class="dx-comment-n">南方有雨</div><div class="dx-comment-t">品牌合作方</div></div>
+              </div>
+              <p>我们和这个团队合作过一支企业短片。最意外的是他们坚持保留了一段不满意但真实的内容，说删掉就假了。交付周期比预期长两周，但成片值得。</p>
+              <div class="dx-comment-f"><span class="dx-stars">★★★★★</span><span>有帮助 3110</span></div>
+            </article>
+
+            <article class="dx-comment">
+              <div class="dx-comment-h">
+                <span class="dx-comment-av" style="background:#9ad1a3">林</span>
+                <div><div class="dx-comment-n">林深见鹿</div><div class="dx-comment-t">观看 2 年</div></div>
+              </div>
+              <p>画质是真的能打，4K 版本在电视上看细节都在。就是希望移动端能支持倍速记忆，每次进去都要重新选择。</p>
+              <div class="dx-comment-f"><span class="dx-stars">★★★★☆</span><span>有帮助 2760</span></div>
+            </article>
+
+            <article class="dx-comment">
+              <div class="dx-comment-h">
+                <span class="dx-comment-av" style="background:#ff9f9f">看</span>
+                <div><div class="dx-comment-n">看片不睡觉</div><div class="dx-comment-t">观看 5 年 · 老用户</div></div>
+              </div>
+              <p>从 2019 年平台还很朴素的时候就在看，现在的内容生态比当年丰富太多，但那种「不着急」的调子居然没变。这点很难得。</p>
+              <div class="dx-comment-f"><span class="dx-stars">★★★★★</span><span>有帮助 1980</span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S7 企业动态 ================= -->
+  <section class="dx-sec" id="dx-news" aria-labelledby="dxNewsTitle">
+    <div class="dx-wrap">
+      <div class="dx-sec-head">
+        <div>
+          <span class="dx-eyebrow">Newsroom · 企业动态</span>
+          <h2 id="dxNewsTitle">大象视频传媒官方发布：近期企业动态与内容更新</h2>
+        </div>
+        <p class="dx-sec-desc">所有公告均以官网为准，合作与报名请通过页面底部入口提交。</p>
+      </div>
+
+      <div class="dx-news">
+        <article class="dx-news-item">
+          <span class="dx-news-date">2026.11.20</span>
+          <div>
+            <h3>《城市切片》第三季定档 11 月 24 日，共 8 集</h3>
+            <p>本季首次采用社区投稿 + 官方执导的联合制作方式，其中 3 集由入驻创作者独立完成。</p>
+          </div>
+          <span class="dx-chip dx-chip--hot">官方发布</span>
+        </article>
+        <article class="dx-news-item">
+          <span class="dx-news-date">2026.11.14</span>
+          <div>
+            <h3>2026 冬季创作者激励计划开启，内容上传通道已就绪</h3>
+            <p>新增「联合出品」通道，入选项目可获得制作资源与发行支持，报名截止 12 月 20 日。</p>
+          </div>
+          <span class="dx-chip">招募中</span>
+        </article>
+        <article class="dx-news-item">
+          <span class="dx-news-date">2026.11.06</span>
+          <div>
+            <h3>4K 片库完成新一轮技术升级，支持更多终端清晰度适配</h3>
+            <p>本次升级涉及 680 部存量作品，同时优化了移动端分段加载策略，弱网环境下更稳定。</p>
+          </div>
+          <span class="dx-chip dx-chip--mut">产品更新</span>
+        </article>
+        <article class="dx-news-item">
+          <span class="dx-news-date">2026.10.29</span>
+          <div>
+            <h3>「走廊计划」公布第二批联合出品伙伴，开放野外拍摄协作</h3>
+            <p>计划未来两年完成 6 部自然题材短片，同步公开拍摄伦理与安全规范文档。</p>
+          </div>
+          <span class="dx-chip dx-chip--mut">合作公告</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S7 合作墙 ================= -->
+  <section class="dx-sec" id="dx-partners" aria-labelledby="dxPartnersTitle">
+    <div class="dx-wrap">
+      <div class="dx-sec-head">
+        <div>
+          <span class="dx-eyebrow">Partners · 合作与共创</span>
+          <h2 id="dxPartnersTitle">与大象视频传媒一起把内容做扎实的伙伴</h2>
+        </div>
+        <p class="dx-sec-desc">我们更愿意称这些机构为共创者：从选题到成片，他们都参与了具体的判断。</p>
+      </div>
+      <div class="dx-partners">
+        <div class="dx-partner">西岭影像档案馆<small>影像资料与修复支持</small></div>
+        <div class="dx-partner">苔原自然基金会<small>野外拍摄伦理顾问</small></div>
+        <div class="dx-partner">里巷放映空间<small>线下放映与社区活动</small></div>
+        <div class="dx-partner">光年声音工作室<small>声音设计与混录</small></div>
+        <div class="dx-partner">青川木工坊<small>匠人题材长期驻地</small></div>
+        <div class="dx-partner">城市观察小组<small>数据与选题协作</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= S7 FAQ + 投稿 CTA ================= -->
+  <section class="dx-sec" id="dx-faq" aria-labelledby="dxFaqTitle">
+    <div class="dx-wrap">
+      <div class="dx-sec-head">
+        <div>
+          <span class="dx-eyebrow">FAQ · 常见问题</span>
+          <h2 id="dxFaqTitle">关于官网使用、投稿与合作的常见问题</h2>
+        </div>
+        <p class="dx-sec-desc">没有找到答案？页面底部的反馈入口会直接进入编辑部的工作台。</p>
+      </div>
+
+      <div class="dx-faq">
+        <details open>
+          <summary>如何向大象视频传媒官网投稿？审核需要多久？</summary>
+          <p>点击页面任意「投稿与报名」按钮，填写作者信息、作品链接与创作说明即可提交。初审一般在 7 个工作日内完成，进入制作孵化阶段的提案会在 15 个工作日内给出完整意见。我们会对每份提案给出书面回复，即便暂不合作也会说明原因。</p>
+        </details>
+        <details>
+          <summary>平台上的视频都是原创正版吗？</summary>
+          <p>是。官网所有上线作品均签署授权文件，音乐、字体与影像素材都有来源凭证。我们会在作品页标注授权类型（独家原创、联合出品、授权引进），并保留版本记录以便追溯。如发现侵权内容，可通过反馈入口提交线索，团队会在 48 小时内处理。</p>
+        </details>
+        <details>
+          <summary>品牌方如何与企业合作定制影像项目？</summary>
+          <p>请在投稿入口中选择「品牌合作」，填写品牌名称、项目类型与预算区间。我们会先安排一次需求沟通，再提供包含创意方向、拍摄计划与交付规格的提案。合作过程中所有阶段成果均可查，拒绝「黑箱式」交付。</p>
+        </details>
+        <details>
+          <summary>4K 高清片库支持哪些设备观看？</summary>
+          <p>网页端支持主流桌面与移动浏览器在线播放，并提供 4K / 1080P / 720P 三档清晰度自动适配。部分长片提供下载码申请通道，需在作品页申请，审核通过后可获取带水印的离线版本。</p>
+        </details>
+        <details>
+          <summary>创作者的收益如何结算？周期是多久？</summary>
+          <p>社区作品的商业引用、分成与联合出品收益按季度结算，合同会明确比例、统计口径与付款节点。关于播放数据的统计方式，官网技术说明页公开了完整定义，创作者可随时核对。</p>
+        </details>
+        <details>
+          <summary>专题企划的选题可以投票参与吗？</summary>
+          <p>可以。「小城下午三点」等筹备中的企划会在每季度开放一次投票，得票靠前的选题优先进入制作排期。投票入口在专题卡片与社区公告中同步公布，结果与执行进度都会在官网公示。</p>
+        </details>
+      </div>
+
+      <div class="dx-cta" style="margin-top:38px">
+        <div>
+          <span class="dx-eyebrow">Submit · 投稿与报名</span>
+          <h2>把你的影像交给一个愿意认真看的团队</h2>
+          <p>无论是一支三分钟的短片，还是一个需要三年才能完成的长片提案，我们都会逐条读完。提交后可以获得编辑部的书面反馈。</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <button class="dx-btn dx-btn--primary" type="button" data-dx-open="submit">立即投稿</button>
+          <button class="dx-btn dx-btn--ghost" type="button" data-dx-share>分享本站</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= S8 页脚 ================= -->
+<footer class="dx-footer">
+  <div class="dx-wrap">
+    <div class="dx-footer-grid">
+      <div class="dx-footer-about">
+        <div class="dx-logo">
+          <svg class="dx-logo-mark" viewBox="0 0 64 64" role="img" aria-label="页脚处的大象视频传媒品牌标志">
+            <rect width="64" height="64" rx="14" fill="#1f1f28"/>
+            <path d="M18 22c0-6 6-9 13-9 9 0 15 5 15 13 0 6-4 9-4 13 0 3 2 4 2 8 0 4-3 7-8 7-4 0-7-2-9-5" stroke="#ff7a3d" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <circle cx="38" cy="24" r="3" fill="#ffd166"/>
+          </svg>
+          <span class="dx-logo-txt"><strong>大象视频传媒</strong><span>Elephant Visual Media</span></span>
+        </div>
+        <p>大象视频传媒官方网站，专注原创纪实影像与品牌内容服务，为创作者与企业搭建高品质内容生态。我们坚持真实、正版与匠心，持续运营一个值得信赖的视频社区。</p>
+      </div>
+      <div>
+        <h4>内容频道</h4>
+        <ul>
+          <li><a href="#dx-focus">焦点内容</a></li>
+          <li><a href="#dx-topics">专题企划</a></li>
+          <li><a href="#dx-rank">数据榜单</a></li>
+          <li><a href="#dx-about">品牌深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与方式</h4>
+        <ul>
+          <li><a href="#dx-creators">创作者矩阵</a></li>
+          <li><a href="#dx-faq">投稿与审核说明</a></li>
+          <li><a href="#dx-partners">品牌合作</a></li>
+          <li><a href="#dx-news">企业动态</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于我们</h4>
+        <ul>
+          <li><a href="#dx-about">品牌故事</a></li>
+          <li><a href="#dx-faq">常见问题</a></li>
+          <li><a href="#dx-top">回到首页</a></li>
+          <li><a href="#dx-news">官方公告</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="dx-footer-bottom">
+      <span>© 2016–2026 大象视频传媒有限公司 版权所有 · 官方网站持续运营中</span>
+      <span>网络文化经营许可 · 信息网络传播视听节目备案号：京字（2026）第 0217 号</span>
+    </div>
+  </div>
+</footer>
+
+<button class="dx-top" id="dxTopBtn" type="button" aria-label="回到页面顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V6M6 12l6-6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<div class="dx-toast" id="dxToast" role="status" aria-live="polite"></div>
+
+<!-- 通用弹窗 -->
+<div class="dx-modal" id="dxModal" role="dialog" aria-modal="true" aria-labelledby="dxModalTitle">
+  <div class="dx-modal-box">
+    <button class="dx-modal-close" type="button" id="dxModalClose" aria-label="关闭弹窗">✕</button>
+    <h3 id="dxModalTitle">标题</h3>
+    <p id="dxModalDesc">说明</p>
+    <div id="dxModalBody"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('dxToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2200);
+  }
+
+  /* ---------- 移动端导航折叠 ---------- */
+  var burger = document.getElementById('dxBurger');
+  var mobileNav = document.getElementById('dxMobileNav');
+  burger.addEventListener('click', function(){
+    var open = burger.getAttribute('aria-expanded') === 'true';
+    burger.setAttribute('aria-expanded', String(!open));
+    mobileNav.classList.toggle('is-open', !open);
+  });
+  mobileNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      burger.setAttribute('aria-expanded','false');
+      mobileNav.classList.remove('is-open');
+    }
+  });
+
+  /* ---------- 搜索：前端筛选反馈 ---------- */
+  var searchForm = document.getElementById('dxSearchForm');
+  var searchInput = document.getElementById('dxSearchInput');
+  var searchRes = document.getElementById('dxSearchRes');
+  var searchIndex = [
+    {t:'一条峡谷的十年', d:'纪实长片 · 峡谷影像组', h:'#dx-focus'},
+    {t:'夜行者：城市补给线', d:'城市切片 S3 · 周野', h:'#dx-focus'},
+    {t:'后期机房 72 小时', d:'剪辑教学 · 苏禾', h:'#dx-focus'},
+    {t:'第七十三把椅子', d:'匠人记录 · 陈屿', h:'#dx-creators'},
+    {t:'城市切片专题', d:'正在更新的专题企划', h:'#dx-topics'},
+    {t:'走廊计划', d:'自然影像联合出品', h:'#dx-topics'},
+    {t:'创作者矩阵', d:'4 位签约与入驻作者', h:'#dx-creators'},
+    {t:'热度榜与口碑榜', d:'每周一更新的数据榜单', h:'#dx-rank'},
+    {t:'投稿与审核说明', d:'常见问题解答', h:'#dx-faq'},
+    {t:'企业动态', d:'官方发布与产品更新', h:'#dx-news'}
+  ];
+  function renderSearch(kw){
+    var k = (kw || '').trim();
+    if(!k){
+      searchRes.innerHTML = '<p>试试搜索：峡谷、城市、剪辑、匠人、投稿</p>';
+      searchRes.classList.add('is-open');
+      return;
+    }
+    var hits = searchIndex.filter(function(it){
+      return it.t.indexOf(k) > -1 || it.d.indexOf(k) > -1;
+    });
+    if(!hits.length){
+      searchRes.innerHTML = '<p>没有找到与「' + escapeHtml(k) + '」直接相关的内容，可前往创作者或专题页浏览。</p>';
+    }else{
+      searchRes.innerHTML = '<p>找到 ' + hits.length + ' 条相关内容</p>' + hits.map(function(it){
+        return '<a href="' + it.h + '">' + escapeHtml(it.t) + ' · <span style="color:#7c7c8a">' + escapeHtml(it.d) + '</span></a>';
+      }).join('');
+    }
+    searchRes.classList.add('is-open');
+  }
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  searchForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    renderSearch(searchInput.value);
+  });
+  searchInput.addEventListener('input', function(){ renderSearch(searchInput.value); });
+  searchInput.addEventListener('focus', function(){ renderSearch(searchInput.value); });
+  document.addEventListener('click', function(e){
+    if(!searchRes.contains(e.target) && !searchForm.contains(e.target)){
+      searchRes.classList.remove('is-open');
+    }
+  });
+  searchRes.addEventListener('click', function(e){
+    if(e.target.closest('a')) searchRes.classList.remove('is-open');
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.querySelectorAll('[data-dx-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var b = btn.querySelector('b');
+      var on = btn.classList.toggle('is-on');
+      var n = parseFloat(b.textContent) || 0;
+      b.textContent = on ? (n + 0.01).toFixed(2) + '万' : (n - 0.01).toFixed(2) + '万';
+      toast(on ? '已点赞，感谢支持原创内容' : '已取消点赞');
+    });
+  });
+  document.querySelectorAll('[data-dx-fav]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('is-on');
+      toast(on ? '已收藏到「我的片单」' : '已取消收藏');
+    });
+  });
+
+  /* ---------- 弹窗系统 ---------- */
+  var modal = document.getElementById('dxModal');
+  var modalTitle = document.getElementById('dxModalTitle');
+  var modalDesc = document.getElementById('dxModalDesc');
+  var modalBody = document.getElementById('dxModalBody');
+  var lastFocus = null;
+
+  function openModal(title, desc, bodyHtml){
+    lastFocus = document.activeElement;
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc || '';
+    modalBody.innerHTML = bodyHtml || '';
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    var f = modal.querySelector('input, textarea, button');
+    if(f) setTimeout(function(){ f.focus(); }, 60);
+  }
+  function closeModal(){
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  document.getElementById('dxModalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+
+  /* ---------- 各类弹窗内容 ---------- */
+  var submitForm =
+    '<form id="dxSubmitForm">' +
+      '<div class="dx-field"><label for="dxSfName">作者 / 机构名称</label><input id="dxSfName" type="text" placeholder="例如：林舟影像工作室" required></div>' +
+      '<div class="dx-field"><label for="dxSfType">合作类型</label><input id="dxSfType" type="text" placeholder="投稿 / 联合出品 / 品牌合作"></div>' +
+      '<div class="dx-field"><label for="dxSfNote">作品说明（选题、时长、完成度）</label><textarea id="dxSfNote" rows="3" placeholder="简单描述你的作品与创作想法"></textarea></div>' +
+      '<div class="dx-to-top-cta"><button class="dx-btn dx-btn--primary" type="submit">提交</button></div>' +
+    '</form>';
+
+  var shareBody =
+    '<div class="dx-share-row">' +
+      '<button type="button" data-dx-copy>复制链接</button>' +
+      '<button type="button" data-dx-wechat>微信</button>' +
+      '<button type="button" data-dx-weibo>微博</button>' +
+    '</div>';
+
+  document.addEventListener('click', function(e){
+    var trigger = e.target.closest('[data-dx-open]');
+    if(trigger){
+      var kind = trigger.getAttribute('data-dx-open');
+      if(kind === 'submit'){
+        openModal('投稿与报名', '请填写基本信息，编辑部会在 7 个工作日内给出初审意见。', submitForm);
+      }else if(kind === 'author'){
+        var name = trigger.getAttribute('data-dx-name') || '创作者';
+        var field = trigger.getAttribute('data-dx-field') || '';
+        var bio = trigger.getAttribute('data-dx-bio') || '';
+        openModal(name + ' · 作者档案', field,
+          '<p style="font-size:13.6px;color:#c0c0cc;line-height:1.8">' + escapeHtml(bio) + '</p>' +
+          '<div class="dx-to-top-cta"><button class="dx-btn dx-btn--ghost dx-btn--mini" type="button" data-dx-close>关闭</button></div>');
+      }else if(kind === 'play'){
+        openModal('正在播放预告', '完整正片可在作品页观看，以下为预告信息。',
+          '<p style="font-size:13.6px;color:#c0c0cc;line-height:1.8">《一条峡谷的十年》· 4K 高清 · 46 分钟<br>导演：林舟　摄影：林舟、周野　后期：苏禾<br>出品：大象视频传媒纪录片工作室</p>' +
+          '<div class="dx-to-top-cta"><button class="dx-btn dx-btn--primary" type="button" data-dx-close>知道了</button></div>');
+      }else if(kind === 'report'){
+        openModal('反馈与举报', '我们会认真处理每一条反馈，48 小时内给出答复。',
+          '<div class="dx-field"><label for="dxRbType">反馈类型</label><input id="dxRbType" type="text" placeholder="播放问题 / 内容建议 / 侵权举报"></div>' +
+          '<div class="dx-field"><label for="dxRbNote">详细说明</label><textarea id="dxRbNote" rows="3" placeholder="请描述你遇到的问题"></textarea></div>' +
+          '<div class="dx-to-top-cta"><button class="dx-btn dx-btn--primary" type="button" data-dx-close>提交反馈</button></div>');
+      }
+    }
+
+    if(e.target.closest('[data-dx-close]')) closeModal();
+
+    /* 分享 */
+    if(e.target.closest('[data-dx-share]')){
+      openModal('分享内容', '把喜欢的内容推荐给朋友，一起看见真实。', shareBody);
+    }
+
+    if(e.target.closest('[data-dx-copy]')){
+      var link = '大象视频传媒官网 · 原创纪实影像与创作者社区';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){
+          toast('链接已复制，可粘贴分享');
+        }).catch(function(){
+          toast('复制失败，请手动选择页面内容');
+        });
+      }else{
+        toast('已生成分享文本：' + link);
+      }
+    }
+    if(e.target.closest('[data-dx-wechat]')) toast('已复制分享文案，可粘贴到微信');
+    if(e.target.closest('[data-dx-weibo]')) toast('已生成微博分享文案');
+  });
+
+  /* 投稿表单与反馈表单提交 */
+  document.addEventListener('submit', function(e){
+    if(e.target.id === 'dxSubmitForm'){
+      e.preventDefault();
+      closeModal();
+      toast('投稿信息已提交，编辑部将在 7 个工作日内回复');
+    }
+  });
+
+  /* ---------- 榜单切换 ---------- */
+  var rankData = {
+    hot: [
+      ['一条峡谷的十年','峡谷影像组 · 纪实长片','128.6万'],
+      ['夜行者：城市补给线','周野 · 城市探索','96.3万'],
+      ['第七十三把椅子','陈屿 · 匠人记录','84.1万'],
+      ['后期机房 72 小时','苏禾 · 剪辑教学','73.5万'],
+      ['县城咖啡馆的一百个下午','小城影像计划','58.2万'],
+      ['为什么我们坚持自然光','林舟 · 摄影方法','51.9万']
+    ],
+    new: [
+      ['城中村的第三个夏天','木下三寸 · 新人投稿','18.2万'],
+      ['一台旧相机的十二个月','阿树 · 日常记录','15.7万'],
+      ['食堂阿姨的菜单手记','南风窗 · 生活方式','13.4万'],
+      ['我给奶奶拍了部短片','鹿野 · 情感故事','11.9万'],
+      ['骑行三百公里的这一段','遥遥 · 户外活动','9.8万'],
+      ['夜班公交司机的最后一趟','小城影像计划','8.6万']
+    ],
+    praise: [
+      ['第七十三把椅子','口碑分 9.8','陈屿'],
+      ['一条峡谷的十年','口碑分 9.7','峡谷影像组'],
+      ['县城咖啡馆的一百个下午','口碑分 9.5','小城影像计划'],
+      ['大象的走廊：8K 尝试','口碑分 9.4','林舟'],
+      ['老匠人的第七十三把椅子','口碑分 9.3','陈屿'],
+      ['城市切片·夜行者','口碑分 9.2','周野']
+    ]
+  };
+  var rankList = document.getElementById('dxRankList');
+  document.querySelectorAll('[data-dx-rank]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('[data-dx-rank]').forEach(function(b){
+        b.classList.remove('is-active');
+        b.setAttribute('aria-selected','false');
+      });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected','true');
+      var key = btn.getAttribute('data-dx-rank');
+      var rows = rankData[key] || rankData.hot;
+      rankList.innerHTML = rows.map(function(r){
+        return '<li><span><span class="dx-rk-t">' + escapeHtml(r[0]) + '</span><br><span class="dx-rk-s">' + escapeHtml(r[1]) + '</span></span><span>' + escapeHtml(r[2]) + '</span></li>';
+      }).join('');
+    });
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('dxTopBtn');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520) topBtn.classList.add('is-show');
+    else topBtn.classList.remove('is-show');
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* ---------- 数据数字滚动 ---------- */
+  var statNums = document.querySelectorAll('.dx-hero-stat b');
+  var statDone = false;
+  function runStats(){
+    if(statDone) return;
+    statDone = true;
+    statNums.forEach(function(el){
+      var raw = el.textContent.replace(/[^\d]/g,'');
+      var suffix = el.querySelector('i');
+      var suffixHtml = suffix ? suffix.outerHTML : '';
+      var target = parseInt(raw, 10) || 0;
+      var cur = 0;
+      var steps = 26;
+      var inc = target / steps;
+      var timer = setInterval(function(){
+        cur += inc;
+        if(cur >= target){ cur = target; clearInterval(timer); }
+        el.innerHTML = Math.floor(cur) + suffixHtml;
+      }, 32);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) runStats(); });
+    }, {threshold:.4});
+    var statBox = document.querySelector('.dx-hero-stats');
+    if(statBox) io.observe(statBox);
+  }else{
+    runStats();
+  }
+
+})();
+</script>
+</body>
+                                                                                                                                                                                                                                                                                                                                                       </html>
